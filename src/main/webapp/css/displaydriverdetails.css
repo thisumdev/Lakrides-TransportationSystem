@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: bisque;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+.img1 {
+  width: 25px;
+  height: 25px;
+}
+
+/* Header style with wave animation */
+header {
+  background: linear-gradient(
+    90deg,
+    #023020,
+    #00a36c,
+    #023020
+  ); /* Dark and light green */
+  background-size: 300% 100%; /* For smooth movement of the gradient */
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: waveAnimation 5s ease-in-out infinite; /* Wave animation */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header:hover {
+  background-color: greenyellow;
+  transition: background-color 0.3s ease-in-out;
+  color: black;
+}
+
+
+#sec {
+	background: linear-gradient(
+    90deg,
+    #023020,
+    #00a36c,
+    #023020
+  ); /* Dark and light green */
+  color:white;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: black;
+  font-size: 40px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  height: 25vh;
+}
+
+.btnedit {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 30px;
+  height: 60px;
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 350px;
+  background-color: bisque;
+  cursor: pointer;
+}
+
+.btnedit:hover {
+  border-color: gray;
+  box-shadow: 3px 3px 3px 1px grey;
+}
+
+/*.container {
+  border: 5px solid transparent;
+  transition: border-color 0.3s ease;
+  box-shadow: none;
+  border-radius: 10px;
+
+  padding: 15px;
+  height: 105%;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}*/
+
+.container {
+  border: none;
+  box-shadow: none;
+  border-radius: 30px;
+
+  padding: 15px;
+  height: 105%;
+  margin-left: 200px;
+  margin-right: 200px;
+  transition: all 0.3s ease-in;
+}
+
+.container:hover {
+  border-color: gray;
+  box-shadow: 3px 3px 3px 1px grey;
+  transform: translateX(3px);
+}
+
+/*.container:hover {
+  border-color: #26d4b9;
+  box-shadow: 0 0 10px black;
+}*/
+
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.avatarimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.mainsec {
+  padding: 20px;
+}
+
+/* Footer style with wave animation */
+footer {
+  background: linear-gradient(
+    90deg,
+    #023020,
+    #00a36c,
+    #023020
+  ); /* Dark and light green */
+  background-size: 300% 100%; /* For smooth movement of the gradient */
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  animation: waveAnimation 5s ease-in-out infinite; /* Wave animation */
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer:hover {
+  background-color: greenyellow;
+  transition: background-color 0.3s ease-in-out;
+  color: black;
+}
+
+/* Keyframes for wave animation */
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Keyframes for header animation */
+@keyframes slideDown {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a::before,
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-links a::before {
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.footer-links a::after {
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.footer-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.footer-links a:hover {
+  color: #ccc;
+}
+
+.footer-social {
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  color: #fff; /* White color for icons */
+  margin: 0 10px;
+  font-size: 24px; /* Size of icons */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.footer-social a:hover {
+  color: #ccc; /* Light grey color on hover */
+  transform: translateY(20px);
+}
+
+/* Keyframes for footer animation */
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
